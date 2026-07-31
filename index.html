@@ -6,62 +6,47 @@
 <title>Liping Zhou — Product Leader &amp; Coach</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper: #F4E9D8;
-    --paper-card: #FBF5EA;
-    --paper-sunk: #ECDEC4;
-    --ink: #2A2018;
-    --ink-soft: rgba(42,32,24,0.68);
-    --accent: #BE5B2E;
-    --accent-2: #6E7F5C;
-    --line: rgba(42,32,24,0.16);
-    --line-strong: rgba(42,32,24,0.3);
-    --shadow: rgba(42,32,24,0.14);
-    --note-1: #F7DFC4;
-    --note-2: #E4E7CE;
-    --note-3: #F1D9D2;
-    --note-4: #DCE6E1;
-    --note-5: #EFE3C8;
-    --script: 'Caveat', cursive;
-    --serif: 'Lora', Georgia, 'Iowan Old Style', serif;
+    --ink: #1B2430;
+    --paper: #F7F6F2;
+    --paper-raised: #EFEDE6;
+    --muted: rgba(27,36,48,0.62);
+    --line: rgba(27,36,48,0.14);
+    --line-strong: rgba(27,36,48,0.28);
+    --gold: #D89A5C;
+    --mauve: #8B7BA8;
+    --data: #2E6F62;
+    --shadow: rgba(27,36,48,0.10);
+    --display: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+    --serif: 'Newsreader', Georgia, 'Iowan Old Style', serif;
     --mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, "Liberation Mono", monospace;
+    --horizon: linear-gradient(90deg, var(--gold), var(--mauve));
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --paper: #201810;
-      --paper-card: #2A2116;
-      --paper-sunk: #170F09;
-      --ink: #F1E4CE;
-      --ink-soft: rgba(241,228,206,0.7);
-      --accent: #E38648;
-      --accent-2: #93AB80;
-      --line: rgba(241,228,206,0.16);
-      --line-strong: rgba(241,228,206,0.3);
+      --ink: #ECE9E2;
+      --paper: #12161D;
+      --paper-raised: #1A1F28;
+      --muted: rgba(236,233,226,0.64);
+      --line: rgba(236,233,226,0.14);
+      --line-strong: rgba(236,233,226,0.28);
+      --gold: #E8B57C;
+      --mauve: #A897C4;
+      --data: #4FA08F;
       --shadow: rgba(0,0,0,0.4);
-      --note-1: #3A2C1B;
-      --note-2: #2B3324;
-      --note-3: #3A2622;
-      --note-4: #223330;
-      --note-5: #362C17;
     }
   }
   :root[data-theme="dark"]{
-    --paper: #201810; --paper-card: #2A2116; --paper-sunk: #170F09;
-    --ink: #F1E4CE; --ink-soft: rgba(241,228,206,0.7);
-    --accent: #E38648; --accent-2: #93AB80;
-    --line: rgba(241,228,206,0.16); --line-strong: rgba(241,228,206,0.3);
-    --shadow: rgba(0,0,0,0.4);
-    --note-1: #3A2C1B; --note-2: #2B3324; --note-3: #3A2622; --note-4: #223330; --note-5: #362C17;
+    --ink: #ECE9E2; --paper: #12161D; --paper-raised: #1A1F28;
+    --muted: rgba(236,233,226,0.64); --line: rgba(236,233,226,0.14); --line-strong: rgba(236,233,226,0.28);
+    --gold: #E8B57C; --mauve: #A897C4; --data: #4FA08F; --shadow: rgba(0,0,0,0.4);
   }
   :root[data-theme="light"]{
-    --paper: #F4E9D8; --paper-card: #FBF5EA; --paper-sunk: #ECDEC4;
-    --ink: #2A2018; --ink-soft: rgba(42,32,24,0.68);
-    --accent: #BE5B2E; --accent-2: #6E7F5C;
-    --line: rgba(42,32,24,0.16); --line-strong: rgba(42,32,24,0.3);
-    --shadow: rgba(42,32,24,0.14);
-    --note-1: #F7DFC4; --note-2: #E4E7CE; --note-3: #F1D9D2; --note-4: #DCE6E1; --note-5: #EFE3C8;
+    --ink: #1B2430; --paper: #F7F6F2; --paper-raised: #EFEDE6;
+    --muted: rgba(27,36,48,0.62); --line: rgba(27,36,48,0.14); --line-strong: rgba(27,36,48,0.28);
+    --gold: #D89A5C; --mauve: #8B7BA8; --data: #2E6F62; --shadow: rgba(27,36,48,0.10);
   }
 
   *{ box-sizing: border-box; }
@@ -69,204 +54,179 @@
   @media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
   body{
     margin:0; background: var(--paper); color: var(--ink);
-    font-family: var(--serif); font-size: 17px; line-height: 1.65;
+    font-family: var(--serif); font-size: 17px; line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
   a{ color: inherit; }
-  a:focus-visible, button:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
-  img, svg{ max-width: 100%; display:block; }
+  a:focus-visible, button:focus-visible{ outline: 2px solid var(--data); outline-offset: 3px; }
 
-  .shell{ max-width: 1080px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2.5rem); }
+  .prose{ max-width: 720px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2.5rem); }
+  .wide{ max-width: 1100px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2.5rem); }
+
+  .rule{ height: 2px; background: var(--horizon); border: none; margin: 0; }
+  .rule-wrap{ padding: clamp(2.4rem, 5vw, 3.6rem) 0 0; }
 
   /* ---------- Nav ---------- */
   header.site-nav{
-    position: sticky; top: 0; z-index: 20;
-    background: color-mix(in srgb, var(--paper) 92%, transparent);
-    backdrop-filter: blur(6px);
+    position: sticky; top: 0; z-index: 20; background: var(--paper);
     border-bottom: 1px solid var(--line);
   }
   .nav-row{
-    display:flex; align-items:center; justify-content:space-between;
-    padding: 1.1rem 0;
+    max-width: 1100px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+    display:flex; align-items:center; justify-content:space-between; height: 3.6rem;
   }
   .wordmark{
-    font-family: var(--script); font-size: 1.7rem; font-weight: 700;
-    text-decoration:none; display:flex; align-items:center; gap:0.35rem;
+    font-family: var(--display); font-weight: 700; font-size: 0.98rem;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    text-decoration:none; display:flex; align-items:center; gap:0.5rem;
   }
-  .wordmark .spark{ color: var(--accent); font-size: 1.1rem; }
+  .wordmark .mark{ width: 8px; height: 8px; background: var(--data); display:inline-block; }
   .nav-links{ display:flex; align-items:center; gap: 1.6rem; }
   .nav-links a{
-    text-decoration:none; font-size: 0.92rem; letter-spacing: 0.02em;
-    color: var(--ink-soft); border-bottom: 1px solid transparent; padding-bottom: 2px;
+    text-decoration:none; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--muted); border-bottom: 1px solid transparent; padding-bottom: 2px;
     transition: color 0.15s ease, border-color 0.15s ease;
   }
-  .nav-links a:hover{ color: var(--accent); border-color: var(--accent); }
+  .nav-links a:hover{ color: var(--data); border-color: var(--data); }
   .theme-btn{
-    background:none; border: 1px solid var(--line-strong); color: var(--ink-soft);
-    font-family: var(--mono); font-size: 0.72rem; padding: 0.3rem 0.6rem; cursor:pointer;
-    border-radius: 100px;
+    background:none; border: 1px solid var(--line-strong); color: var(--muted);
+    font-family: var(--mono); font-size: 0.7rem; padding: 0.3rem 0.6rem; cursor:pointer;
   }
-  .theme-btn:hover{ color: var(--accent); border-color: var(--accent); }
+  .theme-btn:hover{ color: var(--data); border-color: var(--data); }
 
   /* ---------- Hero ---------- */
-  .hero{
-    padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(2rem, 5vw, 3.5rem);
-    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2rem, 5vw, 4rem);
-    align-items: center;
+  .hero{ padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(2.4rem, 5vw, 3.5rem); }
+  .eyebrow{
+    font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--data); margin: 0 0 1rem;
   }
-  .wave-line{ font-size: 1rem; color: var(--ink-soft); margin: 0 0 0.4rem; }
   .hero h1{
-    font-family: var(--script); font-weight: 700; margin: 0;
-    font-size: clamp(3.2rem, 8vw, 5.2rem); line-height: 0.95; text-wrap: balance;
+    font-family: var(--display); font-weight: 700; margin: 0 0 1.1rem;
+    font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: 1; text-wrap: balance; letter-spacing: -0.01em;
   }
-  .tagline{
-    font-family: var(--script); color: var(--accent); font-weight: 700;
-    font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin: 0.3rem 0 1rem;
+  .hero-copy{ font-size: 1.2rem; color: var(--ink); margin: 0 0 1.8rem; max-width: 42ch; }
+  .facts-row{
+    display:flex; flex-wrap:wrap; gap: 0 1rem; font-family: var(--mono); font-size: 0.84rem;
+    color: var(--muted); margin: 0 0 2rem; padding-top: 1.6rem; border-top: 1px solid var(--line);
   }
-  .hero-copy{ max-width: 46ch; font-size: 1.08rem; color: var(--ink-soft); margin: 0 0 1.4rem; }
-  .facts{ list-style:none; margin: 0 0 1.8rem; padding:0; display:flex; flex-direction:column; gap: 0.5rem; }
-  .facts li{ font-size: 0.98rem; }
-  .facts li::before{ content: "✦ "; color: var(--accent); }
-  .cta-row{ display:flex; gap: 0.9rem; flex-wrap: wrap; }
+  .facts-row span:not(:last-child)::after{ content: "·"; margin-left: 1rem; color: var(--line-strong); }
+  .cta-row{ display:flex; gap: 0.8rem; flex-wrap: wrap; }
   .btn{
-    font-family: var(--serif); font-weight: 600; font-size: 0.98rem;
-    padding: 0.75rem 1.5rem; border-radius: 100px; text-decoration:none;
-    display:inline-flex; align-items:center; gap:0.4rem; transition: transform 0.15s ease, opacity 0.15s ease;
+    font-family: var(--mono); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.03em; text-transform: uppercase;
+    padding: 0.85rem 1.5rem; text-decoration:none; border: 1px solid var(--ink);
+    display:inline-flex; align-items:center; gap:0.4rem; transition: opacity 0.15s ease;
   }
-  .btn:hover{ transform: translateY(-2px); }
-  .btn-solid{ background: var(--accent); color: #FBF5EA; }
-  .btn-outline{ border: 1px solid var(--line-strong); color: var(--ink); }
-  .btn-outline:hover{ border-color: var(--accent); color: var(--accent); }
-
-  .hero-art{ position:relative; }
-  .art-card{
-    background: var(--paper-card); border: 1px solid var(--line);
-    border-radius: 22px; padding: 1.6rem; box-shadow: 0 18px 36px -18px var(--shadow);
-  }
+  .btn:hover{ opacity: 0.75; }
+  .btn-solid{ background: var(--ink); color: var(--paper); }
+  .btn-outline{ background: transparent; color: var(--ink); }
 
   /* ---------- Section scaffolding ---------- */
-  section{ padding: clamp(2.6rem, 6vw, 4rem) 0; scroll-margin-top: 4.5rem; }
-  .section-head{ margin-bottom: clamp(1.6rem, 4vw, 2.2rem); }
-  .kicker{ display:flex; align-items:baseline; gap:0.5rem; }
-  .kicker .spark{ color: var(--accent); font-size:1.2rem; }
+  section{ padding: clamp(2.8rem, 6vw, 4.2rem) 0; scroll-margin-top: 4.5rem; }
+  .section-head{ margin-bottom: clamp(1.8rem, 4vw, 2.4rem); }
   h2{
-    font-family: var(--script); font-weight:700; margin: 0;
-    font-size: clamp(2rem, 4vw, 2.6rem); text-wrap: balance;
+    font-family: var(--display); font-weight:700; margin: 0;
+    font-size: clamp(1.7rem, 3.4vw, 2.2rem); text-wrap: balance; letter-spacing: -0.005em;
   }
-  .section-sub{ color: var(--ink-soft); font-size: 0.98rem; margin: 0.5rem 0 0; }
+  .section-sub{ color: var(--muted); font-size: 1rem; margin: 0.5rem 0 0; }
 
-  .reveal{ opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal{ opacity: 0; transform: translateY(12px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.in{ opacity: 1; transform: translateY(0); }
   @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
 
-  /* How I Lead */
-  .pillars{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
-  .pillar{
-    background: var(--paper-card); border: 1px solid var(--line); border-radius: 16px;
-    padding: 1.5rem 1.4rem;
-  }
-  .pillar .glyph{ font-size: 1.5rem; margin-bottom: 0.6rem; display:block; }
-  .pillar h3{ font-family: var(--serif); font-size: 1.08rem; margin: 0 0 0.5rem; }
-  .pillar p{ margin:0; font-size: 0.94rem; color: var(--ink-soft); }
+  /* Principles */
+  .principles{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line-strong); }
+  .principle{ padding: 1.6rem 1.6rem 0 0; border-right: 1px solid var(--line); }
+  .principle:last-child{ border-right: none; }
+  .principle .tick{ display:block; width: 10px; height: 10px; background: var(--data); margin-bottom: 0.9rem; }
+  .principle h3{ font-family: var(--display); font-weight: 700; font-size: 1.08rem; margin: 0 0 0.6rem; }
+  .principle p{ margin:0; font-size: 0.96rem; color: var(--muted); }
 
-  /* Why section */
-  .manifesto p{ max-width: 58ch; font-size: 1.08rem; margin: 0 0 1rem; }
+  /* Manifesto */
+  .pull{
+    font-family: var(--serif); font-style: italic; font-size: 1.35rem; line-height: 1.5;
+    border-left: 3px solid var(--data); padding-left: 1.3rem; margin: 0 0 1.6rem; color: var(--ink);
+  }
+  .manifesto p{ font-size: 1.08rem; margin: 0 0 1.1rem; }
   .manifesto p:last-child{ margin:0; }
 
-  /* Journey */
-  .journey-sub{ font-family: var(--serif); font-weight:600; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color: var(--accent-2); margin: 0 0 0.9rem; }
-  .card-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-bottom: 2.2rem; }
-  .card-grid:last-child{ margin-bottom:0; }
-  .jcard{
-    background: var(--paper-card); border: 1px solid var(--line); border-radius: 16px;
-    padding: 1.3rem;
-  }
-  .jcard .glyph{ font-size: 1.4rem; }
-  .jcard .name{ color: var(--accent); font-weight:600; font-size: 0.98rem; margin: 0.5rem 0 0.15rem; }
-  .jcard .sub{ font-weight:600; font-size: 0.94rem; margin: 0 0 0.4rem; }
-  .jcard .desc{ font-size: 0.88rem; color: var(--ink-soft); margin:0; }
+  /* Timeline */
+  .timeline{ position:relative; padding: 3.4rem 0 3rem; }
+  .timeline .line{ position:absolute; left:0; right:0; top: 50%; height: 2px; background: var(--horizon); }
+  .timeline-track{ position:relative; display:flex; justify-content: space-between; }
+  .tpoint{ position:relative; flex: 1; display:flex; justify-content:center; }
+  .tpoint .dot{ position:absolute; top:50%; width: 10px; height:10px; border-radius:50%; background: var(--paper); border: 2px solid var(--data); transform: translate(-50%, -50%); left: 50%; }
+  .tlabel{ position:absolute; left:50%; transform: translateX(-50%); width: 9rem; text-align:center; }
+  .tpoint:nth-child(odd) .tlabel{ bottom: calc(50% + 1.1rem); }
+  .tpoint:nth-child(even) .tlabel{ top: calc(50% + 1.1rem); }
+  .tlabel .place{ font-family: var(--display); font-weight: 700; font-size: 0.98rem; margin: 0 0 0.2rem; }
+  .tlabel .note{ font-family: var(--mono); font-size: 0.74rem; color: var(--muted); line-height: 1.35; }
+
+  .journey-sub{ font-family: var(--mono); font-weight:600; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color: var(--data); margin: 0 0 0.9rem; }
+  .ledger{ border-top: 1px solid var(--line-strong); }
+  .lrow{ padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+  .lrow-top{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; flex-wrap:wrap; }
+  .lrow .name{ font-family: var(--display); font-weight: 700; font-size: 1.05rem; }
+  .lrow .range{ font-family: var(--mono); font-size: 0.78rem; color: var(--muted); white-space:nowrap; }
+  .lrow p{ margin: 0.4rem 0 0; color: var(--muted); font-size: 0.94rem; max-width: 62ch; }
 
   /* Case studies */
-  .cases{ display:flex; flex-direction:column; gap: 1.4rem; }
-  .case{
-    background: var(--paper-card); border: 1px solid var(--line); border-radius: 18px;
-    padding: clamp(1.4rem, 3vw, 2rem); position:relative;
-  }
-  .case-top{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 0.8rem; }
-  .case-num{ font-family: var(--mono); font-size: 0.85rem; color: var(--ink-soft); }
-  .case-glyph{
-    width: 2.4rem; height:2.4rem; border-radius: 10px; background: var(--paper-sunk);
-    display:flex; align-items:center; justify-content:center; font-size: 1.2rem;
-  }
-  .case-eyebrow{ font-family: var(--mono); font-size: 0.72rem; letter-spacing:0.1em; text-transform:uppercase; color: var(--accent-2); margin: 0 0 0.4rem; }
-  .case h3{ font-family: var(--serif); font-size: 1.3rem; margin: 0 0 0.6rem; }
-  .case p{ margin: 0 0 1rem; color: var(--ink-soft); max-width: 62ch; font-size: 0.98rem; }
-  .case-tags{ display:flex; flex-wrap:wrap; gap: 0.5rem; margin-bottom: 0.9rem; }
-  .case-tags span{
-    font-family: var(--mono); font-size: 0.76rem; padding: 0.28rem 0.65rem;
-    border: 1px solid var(--line-strong); border-radius: 100px; color: var(--ink);
-  }
-  .case-link{ font-size: 0.88rem; text-decoration:none; color: var(--accent); border-bottom: 1px solid transparent; }
-  .case-link:hover{ border-color: var(--accent); }
+  .cases{ border-top: 1px solid var(--line-strong); }
+  .case{ display:grid; grid-template-columns: 200px 1fr; gap: clamp(1.5rem, 4vw, 3rem); padding: clamp(2rem, 4vw, 2.6rem) 0; border-bottom: 1px solid var(--line); }
+  .case-metric{ font-family: var(--display); font-weight: 700; font-size: clamp(2.2rem, 5vw, 3rem); color: var(--data); line-height: 1; }
+  .case-metric-cap{ font-family: var(--mono); font-size: 0.72rem; color: var(--muted); margin-top: 0.6rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .case-eyebrow{ font-family: var(--mono); font-size: 0.74rem; letter-spacing:0.08em; text-transform:uppercase; color: var(--muted); margin: 0 0 0.5rem; }
+  .case h3{ font-family: var(--display); font-weight: 700; font-size: 1.35rem; margin: 0 0 0.7rem; text-wrap: balance; }
+  .case p{ margin: 0 0 0.9rem; color: var(--ink); max-width: 60ch; font-size: 1rem; }
+  .case-tags{ font-family: var(--mono); font-size: 0.82rem; color: var(--muted); margin-bottom: 0.7rem; }
+  .case-tags span:not(:last-child)::after{ content: " · "; }
+  .case-link{ font-size: 0.88rem; text-decoration:none; color: var(--data); border-bottom: 1px solid transparent; }
+  .case-link:hover{ border-color: var(--data); }
 
-  /* Notes / sticky */
-  .notes-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem 1.4rem; }
-  .note{
-    position:relative; padding: 1.5rem 1.4rem 1.3rem; border-radius: 3px;
-    box-shadow: 0 10px 20px -10px var(--shadow);
-    transition: transform 0.25s ease;
-  }
-  .note::before{
-    content:""; position:absolute; top:-10px; left: 50%; transform: translateX(-50%) rotate(-2deg);
-    width: 54px; height: 20px; background: rgba(190,91,46,0.28);
-  }
-  .note:hover{ transform: rotate(0deg) translateY(-2px) !important; }
-  .note .num{ font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); float:right; }
-  .note h4{ font-family: var(--serif); font-size: 1.05rem; margin: 0 0 0.5rem; }
-  .note p{ margin: 0 0 0.6rem; font-size: 0.9rem; }
-  .note .quote{ font-style: italic; font-size: 0.84rem; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: 0.5rem; margin:0; }
+  /* Field notes (glossary) */
+  .notes{ border-top: 1px solid var(--line-strong); }
+  .note-row{ display:grid; grid-template-columns: 220px 1fr; gap: clamp(1rem, 3vw, 2.5rem); padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .note-term{ font-family: var(--display); font-weight: 700; font-size: 1.02rem; }
+  .note-def p{ margin: 0 0 0.5rem; font-size: 0.98rem; }
+  .note-def .quote{ font-style: italic; color: var(--muted); font-size: 0.92rem; margin:0; }
 
   /* Contact / footer */
-  .contact-wrap{
-    background: var(--paper-card); border: 1px solid var(--line); border-radius: 24px;
-    padding: clamp(2rem, 5vw, 3.2rem); text-align:center;
-  }
-  .contact-wrap .kicker{ justify-content:center; }
-  .contact-wrap h2{ margin: 0.6rem 0 1rem; }
-  .contact-links{ display:flex; justify-content:center; gap: 1.4rem; flex-wrap:wrap; margin: 1.4rem 0 2rem; font-size: 0.98rem; }
+  .contact-wrap{ text-align:left; }
+  .contact-wrap h2{ margin: 0.6rem 0 1.6rem; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+  .contact-links{ display:flex; gap: 1.6rem; flex-wrap:wrap; margin: 1.8rem 0; font-family: var(--mono); font-size: 0.9rem; }
   .contact-links a{ text-decoration:none; border-bottom: 1px solid var(--line-strong); }
-  .contact-links a:hover{ color: var(--accent); border-color: var(--accent); }
+  .contact-links a:hover{ color: var(--data); border-color: var(--data); }
   .currently{
-    display:flex; justify-content:center; gap: clamp(1.5rem, 5vw, 3rem); flex-wrap:wrap;
-    border-top: 1px solid var(--line); padding-top: 1.6rem; margin-top: 0.5rem;
+    display:flex; gap: clamp(1.5rem, 5vw, 3rem); flex-wrap:wrap;
+    border-top: 1px solid var(--line); padding-top: 1.6rem; margin-top: 1.4rem;
   }
-  .currently div{ text-align:left; }
-  .currently .k{ font-family: var(--mono); font-size: 0.7rem; letter-spacing:0.08em; text-transform:uppercase; color: var(--accent-2); margin-bottom:0.3rem; }
-  .currently .v{ font-size: 0.92rem; max-width: 22ch; }
+  .currently .k{ font-family: var(--mono); font-size: 0.68rem; letter-spacing:0.08em; text-transform:uppercase; color: var(--data); margin-bottom:0.3rem; }
+  .currently .v{ font-size: 0.9rem; max-width: 22ch; font-family: var(--serif); }
 
   footer.sign-off{
-    text-align:center; padding: 2rem 0 3rem; font-size: 0.85rem; color: var(--ink-soft);
+    padding: 2rem clamp(1.25rem, 4vw, 2.5rem) 3rem; max-width: 1100px; margin: 0 auto;
+    font-size: 0.82rem; color: var(--muted); font-family: var(--mono);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap: 0.5rem;
   }
-  footer.sign-off .cursive{ font-family: var(--script); font-size: 1.1rem; color: var(--accent); display:block; margin-bottom: 0.4rem; }
 
-  @media (max-width: 900px){
-    .hero{ grid-template-columns: 1fr; }
-    .hero-art{ order:-1; max-width: 360px; margin: 0 auto; }
-    .pillars, .card-grid{ grid-template-columns: repeat(2, 1fr); }
-    .notes-grid{ grid-template-columns: 1fr; }
-  }
-  @media (max-width: 600px){
-    .nav-links{ gap: 1rem; }
-    .pillars, .card-grid{ grid-template-columns: 1fr; }
-    .currently{ justify-content:flex-start; }
+  @media (max-width: 780px){
+    .principles{ grid-template-columns: 1fr; }
+    .principle{ border-right:none; border-bottom: 1px solid var(--line); padding: 1.6rem 0; }
+    .principle:last-child{ border-bottom:none; }
+    .case{ grid-template-columns: 1fr; }
+    .note-row{ grid-template-columns: 1fr; gap: 0.5rem; }
+    .timeline-track{ flex-direction: column; gap: 2.6rem; align-items:flex-start; }
+    .timeline .line{ left: 4px; right:auto; top:0; bottom:0; width:2px; height:auto; background: linear-gradient(180deg, var(--gold), var(--mauve)); }
+    .tpoint{ flex: none; justify-content:flex-start; padding-left: 1.6rem; }
+    .tpoint .dot{ left: 4px; top: 6px; transform: translate(-50%,-50%); }
+    .tlabel{ position:static; transform:none; text-align:left; width:auto; }
   }
 </style>
 </head>
 <body>
 
 <header class="site-nav">
-  <div class="shell nav-row">
-    <a href="#top" class="wordmark">Liping Zhou <span class="spark">✦</span></a>
+  <div class="nav-row">
+    <a href="#top" class="wordmark"><span class="mark"></span>Liping Zhou</a>
     <nav class="nav-links">
       <a href="#work">Work</a>
       <a href="#notes">Notes</a>
@@ -277,79 +237,43 @@
 </header>
 
 <main id="top">
-  <div class="shell hero">
-    <div>
-      <p class="wave-line">👋 Hi, I'm</p>
-      <h1>Liping Zhou</h1>
-      <p class="tagline">Clarity-driven</p>
-      <p class="hero-copy">I've spent a decade turning messy onboarding, support, and benchmarking problems into products people actually finish — now I coach other PMs to do the same.</p>
-      <ul class="facts">
-        <li>Northwestern University</li>
-        <li>Chicago, IL</li>
-        <li>Founder, Calm Horizons LLC</li>
-        <li>GenAI in Product</li>
-      </ul>
-      <div class="cta-row">
-        <a href="#work" class="btn btn-solid">View my work</a>
-        <a href="#contact" class="btn btn-outline">Say hello</a>
-      </div>
+  <div class="prose hero">
+    <p class="eyebrow">Product Leader → Founder &amp; Coach</p>
+    <h1>Liping Zhou</h1>
+    <p class="hero-copy">I've spent a decade turning messy onboarding, support, and benchmarking problems into products people actually finish — now I coach other PMs to do the same.</p>
+    <div class="cta-row">
+      <a href="#work" class="btn btn-solid">View my work</a>
+      <a href="#contact" class="btn btn-outline">Say hello</a>
     </div>
-    <div class="hero-art">
-      <div class="art-card">
-        <svg viewBox="0 0 320 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="0" y="0" width="320" height="300" fill="none"/>
-          <g fill="none" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="30" y="30" width="180" height="128" rx="8"/>
-            <line x1="30" y1="58" x2="210" y2="58"/>
-            <circle cx="45" cy="44" r="3" fill="var(--accent)" stroke="none"/>
-            <circle cx="58" cy="44" r="3" fill="var(--accent)" stroke="none"/>
-            <polyline points="48,132 78,100 108,118 140,72 172,92 196,62" />
-            <circle cx="196" cy="62" r="4" fill="var(--accent)" stroke="none"/>
-            <line x1="120" y1="158" x2="120" y2="178"/>
-            <line x1="95" y1="178" x2="145" y2="178"/>
-          </g>
-          <g fill="none" stroke="var(--accent-2)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M240 130 q0 -34 32 -34 q32 0 32 34 q0 40 -32 58 q-32 -18 -32 -58 z" />
-            <path d="M272 108 v34" />
-            <path d="M260 118 q12 8 24 0" />
-          </g>
-          <g fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.75">
-            <rect x="235" y="205" width="16" height="26" rx="2"/>
-            <path d="M235 205 q8 -10 16 0" />
-            <line x1="239" y1="212" x2="247" y2="212"/>
-            <line x1="239" y1="219" x2="247" y2="219"/>
-          </g>
-          <g fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.75">
-            <path d="M40 210 q-4 -22 18 -22 q22 0 18 22 z" />
-            <line x1="58" y1="188" x2="58" y2="176"/>
-            <line x1="49" y1="182" x2="41" y2="172"/>
-            <line x1="67" y1="182" x2="75" y2="172"/>
-            <rect x="34" y="210" width="48" height="10" rx="2"/>
-          </g>
-          <path d="M20 260 q140 -30 280 0" fill="none" stroke="var(--ink)" stroke-width="2" opacity="0.35" stroke-linecap="round"/>
-        </svg>
-      </div>
+    <div class="facts-row">
+      <span>Northwestern University</span>
+      <span>Chicago, IL</span>
+      <span>Founder, Calm Horizons LLC</span>
+      <span>GenAI in Product</span>
     </div>
   </div>
 
+  <div class="rule-wrap"><hr class="rule" /></div>
+
   <section id="how">
-    <div class="shell">
+    <div class="wide">
       <div class="section-head reveal">
-        <div class="kicker"><span class="spark">✦</span><h2>How I Lead</h2></div>
+        <p class="eyebrow">Principles</p>
+        <h2>How I Lead</h2>
       </div>
-      <div class="pillars">
-        <div class="pillar reveal">
-          <span class="glyph">🔍</span>
+      <div class="principles reveal">
+        <div class="principle">
+          <span class="tick"></span>
           <h3>Discovery-Led</h3>
           <p>Every roadmap starts with real conversations — customer interviews, workflow audits, competitive scans — before a single ticket gets written.</p>
         </div>
-        <div class="pillar reveal">
-          <span class="glyph">📊</span>
+        <div class="principle">
+          <span class="tick"></span>
           <h3>Metrics-Driven</h3>
           <p>OKRs, CSAT, adoption curves. If a change doesn't move a number that matters, it doesn't ship.</p>
         </div>
-        <div class="pillar reveal">
-          <span class="glyph">🌿</span>
+        <div class="principle">
+          <span class="tick"></span>
           <h3>Human-Centered Coaching</h3>
           <p>Mentoring PMs the same way I redesign onboarding: reduce friction, build confidence, one honest conversation at a time.</p>
         </div>
@@ -357,214 +281,231 @@
     </div>
   </section>
 
+  <div class="rule-wrap"><hr class="rule" /></div>
+
   <section id="why">
-    <div class="shell">
+    <div class="prose">
       <div class="section-head reveal">
-        <div class="kicker"><span class="spark">✦</span><h2>Why This Work</h2></div>
+        <p class="eyebrow">Why This Work</p>
       </div>
       <div class="manifesto reveal">
-        <p>I've always been drawn to the moment where confusion turns into clarity — a customer finally getting unstuck, a team finally agreeing on what matters.</p>
+        <p class="pull">Confusion turning into clarity — a customer finally getting unstuck, a team finally agreeing on what matters. That's the moment I've always chased.</p>
         <p>After a decade inside Morningstar, Avalara, and Payscale, I kept coming back to the same question: how do we make complex things feel simple?</p>
         <p>Calm Horizons is where that question becomes the whole job — coaching PMs through career growth and interview prep, while I explore meditation and content creation as part of a bigger goal: helping people feel more grounded and live more meaningful lives.</p>
       </div>
     </div>
   </section>
 
+  <div class="rule-wrap"><hr class="rule" /></div>
+
   <section id="journey">
-    <div class="shell">
+    <div class="wide">
       <div class="section-head reveal">
-        <div class="kicker"><span class="spark">✦</span><h2>Journey</h2></div>
-        <p class="section-sub">Places first, then the chapters that followed.</p>
+        <p class="eyebrow">Journey</p>
+        <h2>Places, then the chapters that followed</h2>
       </div>
 
-      <p class="journey-sub reveal">Places</p>
-      <div class="card-grid reveal">
-        <div class="jcard">
-          <span class="glyph">🌾</span>
-          <div class="name">Hunan, China</div>
-          <div class="sub">Where it started</div>
-          <p class="desc">A.B. in English, Jishou University Zhangjiajie College.</p>
-        </div>
-        <div class="jcard">
-          <span class="glyph">🇨🇳</span>
-          <div class="name">Shenzhen, China</div>
-          <div class="sub">First chapter at Morningstar</div>
-          <p class="desc">Six years in data, QA, and project management, straight out of college.</p>
-        </div>
-        <div class="jcard">
-          <span class="glyph">🎓</span>
-          <div class="name">Evanston, IL</div>
-          <div class="sub">Northwestern University</div>
-          <p class="desc">M.S. in Information Technology.</p>
-        </div>
-        <div class="jcard">
-          <span class="glyph">🏙</span>
-          <div class="name">Chicago, IL</div>
-          <div class="sub">Home base</div>
-          <p class="desc">A decade of product work, and now Calm Horizons.</p>
+      <div class="timeline reveal">
+        <div class="line"></div>
+        <div class="timeline-track">
+          <div class="tpoint">
+            <div class="dot"></div>
+            <div class="tlabel">
+              <div class="place">Hunan, China</div>
+              <div class="note">A.B. in English,<br>Jishou University</div>
+            </div>
+          </div>
+          <div class="tpoint">
+            <div class="dot"></div>
+            <div class="tlabel">
+              <div class="place">Shenzhen, China</div>
+              <div class="note">6 years at Morningstar —<br>data, QA, project mgmt</div>
+            </div>
+          </div>
+          <div class="tpoint">
+            <div class="dot"></div>
+            <div class="tlabel">
+              <div class="place">Evanston, IL</div>
+              <div class="note">M.S., Information<br>Technology, Northwestern</div>
+            </div>
+          </div>
+          <div class="tpoint">
+            <div class="dot"></div>
+            <div class="tlabel">
+              <div class="place">Chicago, IL</div>
+              <div class="note">Home base — a decade of<br>product, now Calm Horizons</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <p class="journey-sub reveal">Career</p>
-      <div class="card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="jcard">
-          <span class="glyph">💾</span>
-          <div class="name">Morningstar</div>
-          <div class="sub">A decade of range</div>
-          <p class="desc">Six years in Shenzhen (data, QA, project management), then Chicago HQ as PM — API products and $3.5M in retirement solutions.</p>
+      <div class="ledger reveal">
+        <div class="lrow">
+          <div class="lrow-top"><span class="name">Morningstar</span><span class="range">Oct 2010 – Sep 2021</span></div>
+          <p>Six years in Shenzhen (data, QA, project management), then Chicago HQ as PM — API products and $3.5M in retirement solutions.</p>
         </div>
-        <div class="jcard">
-          <span class="glyph">🏦</span>
-          <div class="name">Inspira Financial</div>
-          <div class="sub">Built for scale</div>
-          <p class="desc">A next-gen client portal handling 95% of company revenue.</p>
+        <div class="lrow">
+          <div class="lrow-top"><span class="name">Inspira Financial</span><span class="range">Sep 2021 – Aug 2022</span></div>
+          <p>A next-gen client portal handling 95% of company revenue.</p>
         </div>
-        <div class="jcard">
-          <span class="glyph">🧾</span>
-          <div class="name">Avalara</div>
-          <div class="sub">Self-service, at scale</div>
-          <p class="desc">Turned onboarding into a product — $2M+ saved, CSAT up 20 points.</p>
+        <div class="lrow">
+          <div class="lrow-top"><span class="name">Avalara</span><span class="range">Aug 2022 – Sep 2025</span></div>
+          <p>Turned onboarding into a product — $2M+ saved, CSAT up 20 points.</p>
         </div>
-        <div class="jcard">
-          <span class="glyph">📈</span>
-          <div class="name">Payscale</div>
-          <div class="sub">Benchmarking, modernized</div>
-          <p class="desc">Rebuilt core compensation workflows for Payfactors &amp; Marketpay.</p>
+        <div class="lrow">
+          <div class="lrow-top"><span class="name">Payscale</span><span class="range">Sep 2025 – May 2026</span></div>
+          <p>Rebuilt core compensation workflows for Payfactors &amp; Marketpay.</p>
         </div>
-        <div class="jcard">
-          <span class="glyph">🌱</span>
-          <div class="name">Calm Horizons</div>
-          <div class="sub">The next chapter</div>
-          <p class="desc">Founded in 2026 to coach PMs on career growth and product craft.</p>
+        <div class="lrow">
+          <div class="lrow-top"><span class="name">Calm Horizons</span><span class="range">Jun 2026 – Present</span></div>
+          <p>Founded to coach PMs on career growth and product craft.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="rule-wrap"><hr class="rule" /></div>
+
   <section id="work">
-    <div class="shell">
+    <div class="wide">
       <div class="section-head reveal">
-        <div class="kicker"><span class="spark">✦</span><h2>Case Studies</h2></div>
-        <p class="section-sub">Four problems, four shipped answers.</p>
+        <p class="eyebrow">Selected Outcomes</p>
+        <h2>What moved the needle</h2>
       </div>
       <div class="cases">
 
         <div class="case reveal">
-          <div class="case-top">
-            <span class="case-num">01</span>
-            <span class="case-glyph">🧾</span>
+          <div>
+            <div class="case-metric">100%</div>
+            <div class="case-metric-cap">self-service onboarding</div>
           </div>
-          <p class="case-eyebrow">Onboarding &amp; Self-Service</p>
-          <h3>Avalara: from ticket queue to 100% self-service</h3>
-          <p>Redesigned the global customer portal so every core product could onboard itself — cutting implementation time in half and freeing up support to handle the cases that actually needed a human.</p>
-          <div class="case-tags"><span>100% self-service</span><span>$2M+ saved</span><span>CSAT 50 → 70%</span></div>
-          <a class="case-link" href="https://www.avalara.com" target="_blank" rel="noopener">Avalara ↗</a>
+          <div>
+            <p class="case-eyebrow">Onboarding &amp; Self-Service</p>
+            <h3>Avalara: from ticket queue to 100% self-service</h3>
+            <p>Redesigned the global customer portal so every core product could onboard itself — cutting implementation time in half and freeing up support to handle the cases that actually needed a human.</p>
+            <p class="case-tags"><span>$2M+ saved</span><span>CSAT 50 → 70%</span></p>
+            <a class="case-link" href="https://www.avalara.com" target="_blank" rel="noopener">Avalara ↗</a>
+          </div>
         </div>
 
         <div class="case reveal">
-          <div class="case-top">
-            <span class="case-num">02</span>
-            <span class="case-glyph">🤖</span>
+          <div>
+            <div class="case-metric">50%+</div>
+            <div class="case-metric-cap">inquiries auto-resolved</div>
           </div>
-          <p class="case-eyebrow">GenAI in Product</p>
-          <h3>A chatbot that resolves half the queue</h3>
-          <p>Led continuous improvement of a GenAI support chatbot, aligning engineering, design, and customer ops on where automation should — and shouldn't — replace a person, while managing and mentoring a team of three PMs.</p>
-          <div class="case-tags"><span>50%+ deflection</span><span>+10% touchless onboarding</span><span>Team of 3 PMs</span></div>
-          <a class="case-link" href="https://www.avalara.com" target="_blank" rel="noopener">Avalara ↗</a>
+          <div>
+            <p class="case-eyebrow">GenAI in Product</p>
+            <h3>A chatbot that resolves half the queue</h3>
+            <p>Led continuous improvement of a GenAI support chatbot, aligning engineering, design, and customer ops on where automation should — and shouldn't — replace a person, while managing and mentoring a team of three PMs.</p>
+            <p class="case-tags"><span>+10% touchless onboarding</span><span>Team of 3 PMs</span></p>
+            <a class="case-link" href="https://www.avalara.com" target="_blank" rel="noopener">Avalara ↗</a>
+          </div>
         </div>
 
         <div class="case reveal">
-          <div class="case-top">
-            <span class="case-num">03</span>
-            <span class="case-glyph">🏦</span>
+          <div>
+            <div class="case-metric">$3.5M</div>
+            <div class="case-metric-cap">new revenue</div>
           </div>
-          <p class="case-eyebrow">Retirement Products &amp; Team Scale</p>
-          <h3>Six scrum teams, $3.5M in new revenue</h3>
-          <p>Built retirement solutions end-to-end with six scrum teams, set OKRs directly with the VP of Product, and mentored six product owners along the way.</p>
-          <div class="case-tags"><span>$3.5M revenue</span><span>6 scrum teams</span><span>6 POs mentored</span></div>
-          <a class="case-link" href="https://www.morningstar.com" target="_blank" rel="noopener">Morningstar ↗</a>
+          <div>
+            <p class="case-eyebrow">Retirement Products &amp; Team Scale</p>
+            <h3>Six scrum teams, $3.5M in new revenue</h3>
+            <p>Built retirement solutions end-to-end with six scrum teams, set OKRs directly with the VP of Product, and mentored six product owners along the way.</p>
+            <p class="case-tags"><span>6 scrum teams</span><span>6 POs mentored</span></p>
+            <a class="case-link" href="https://www.morningstar.com" target="_blank" rel="noopener">Morningstar ↗</a>
+          </div>
         </div>
 
         <div class="case reveal">
-          <div class="case-top">
-            <span class="case-num">04</span>
-            <span class="case-glyph">📊</span>
+          <div>
+            <div class="case-metric">&lt;15%</div>
+            <div class="case-metric-cap">legacy adoption, before</div>
           </div>
-          <p class="case-eyebrow">Compensation Benchmarking</p>
-          <h3>Modernizing Payfactors &amp; Marketpay</h3>
-          <p>Found that legacy salary-structure workflows had stalled below 15% adoption, then led discovery and built the roadmap for an AI-powered replacement — alongside chatbot and survey-library upgrades.</p>
-          <div class="case-tags"><span>AI-powered redesign</span><span>Pay Markets · Jobs · Employees</span><span>Permission-aware chatbot</span></div>
-          <a class="case-link" href="https://www.payscale.com" target="_blank" rel="noopener">Payscale ↗</a>
+          <div>
+            <p class="case-eyebrow">Compensation Benchmarking</p>
+            <h3>Modernizing Payfactors &amp; Marketpay</h3>
+            <p>Found that legacy salary-structure workflows had stalled below 15% adoption, then led discovery and built the roadmap for an AI-powered replacement — alongside chatbot and survey-library upgrades.</p>
+            <p class="case-tags"><span>Pay Markets · Jobs · Employees</span><span>Permission-aware chatbot</span></p>
+            <a class="case-link" href="https://www.payscale.com" target="_blank" rel="noopener">Payscale ↗</a>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
+
+  <div class="rule-wrap"><hr class="rule" /></div>
 
   <section id="notes">
-    <div class="shell">
+    <div class="wide">
       <div class="section-head reveal">
-        <div class="kicker"><span class="spark">✦</span><h2>Notes</h2></div>
-        <p class="section-sub">Sticky notes — hover to straighten them out.</p>
+        <p class="eyebrow">Field Notes</p>
+        <h2>What I keep coming back to</h2>
       </div>
-      <div class="notes-grid">
-        <div class="note reveal" style="background: var(--note-1); transform: rotate(-1.6deg);">
-          <span class="num">#1</span>
-          <h4>Design Thinking</h4>
-          <p>Start with the friction, not the feature.</p>
-          <p class="quote">"The best redesigns are usually subtraction, not addition."</p>
+      <div class="notes reveal">
+        <div class="note-row">
+          <div class="note-term">Design Thinking</div>
+          <div class="note-def">
+            <p>Start with the friction, not the feature.</p>
+            <p class="quote">"The best redesigns are usually subtraction, not addition."</p>
+          </div>
         </div>
-        <div class="note reveal" style="background: var(--note-2); transform: rotate(1.2deg);">
-          <span class="num">#2</span>
-          <h4>GenAI in Product</h4>
-          <p>AI should remove steps, not add a chat window.</p>
-          <p class="quote">"If it doesn't cut clicks, it's a demo, not a product."</p>
+        <div class="note-row">
+          <div class="note-term">GenAI in Product</div>
+          <div class="note-def">
+            <p>AI should remove steps, not add a chat window.</p>
+            <p class="quote">"If it doesn't cut clicks, it's a demo, not a product."</p>
+          </div>
         </div>
-        <div class="note reveal" style="background: var(--note-3); transform: rotate(1.8deg);">
-          <span class="num">#3</span>
-          <h4>Metrics &amp; OKRs</h4>
-          <p>If it doesn't move CSAT or the funnel, it's a nice-to-have.</p>
-          <p class="quote">"Instinct gets you a hypothesis. Data gets you a decision."</p>
+        <div class="note-row">
+          <div class="note-term">Metrics &amp; OKRs</div>
+          <div class="note-def">
+            <p>If it doesn't move CSAT or the funnel, it's a nice-to-have.</p>
+            <p class="quote">"Instinct gets you a hypothesis. Data gets you a decision."</p>
+          </div>
         </div>
-        <div class="note reveal" style="background: var(--note-4); transform: rotate(-1.1deg);">
-          <span class="num">#4</span>
-          <h4>Coaching PMs</h4>
-          <p>Career growth is a product problem too.</p>
-          <p class="quote">"Discovery, iteration, feedback loops — they work on people too."</p>
+        <div class="note-row">
+          <div class="note-term">Coaching PMs</div>
+          <div class="note-def">
+            <p>Career growth is a product problem too.</p>
+            <p class="quote">"Discovery, iteration, feedback loops — they work on people too."</p>
+          </div>
         </div>
-        <div class="note reveal" style="background: var(--note-5); transform: rotate(-2deg); grid-column: 1 / -1; max-width: 420px;">
-          <span class="num">#5</span>
-          <h4>Staying Grounded</h4>
-          <p>Product work should leave you steadier, not more scattered.</p>
-          <p class="quote">"Calm is a practice, not a personality trait."</p>
+        <div class="note-row">
+          <div class="note-term">Staying Grounded</div>
+          <div class="note-def">
+            <p>Product work should leave you steadier, not more scattered.</p>
+            <p class="quote">"Calm is a practice, not a personality trait."</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="rule-wrap"><hr class="rule" /></div>
+
   <section id="contact">
-    <div class="shell">
-      <div class="contact-wrap reveal">
-        <div class="kicker"><span class="spark">✦</span></div>
-        <h2>Say hi — about your product career, or a coaching intro call.</h2>
-        <a href="mailto:lela.zhou818@gmail.com" class="btn btn-solid">Let's talk</a>
-        <div class="contact-links">
-          <a href="mailto:lela.zhou818@gmail.com">lela.zhou818@gmail.com</a>
-          <a href="https://www.linkedin.com/in/liping-zhou/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-        <div class="currently">
-          <div><div class="k">Currently</div><div class="v">Coaching PMs &amp; founders through Calm Horizons</div></div>
-          <div><div class="k">Open to</div><div class="v">Coaching clients, speaking, product advisory</div></div>
-          <div><div class="k">City</div><div class="v">Chicago, IL</div></div>
-        </div>
+    <div class="prose contact-wrap reveal">
+      <p class="eyebrow">Get in Touch</p>
+      <h2>Say hi — about your product career, or a coaching intro call.</h2>
+      <a href="mailto:lela.zhou818@gmail.com" class="btn btn-solid">Let's talk</a>
+      <div class="contact-links">
+        <a href="mailto:lela.zhou818@gmail.com">lela.zhou818@gmail.com</a>
+        <a href="https://www.linkedin.com/in/liping-zhou/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="currently">
+        <div><div class="k">Currently</div><div class="v">Coaching PMs &amp; founders through Calm Horizons</div></div>
+        <div><div class="k">Open to</div><div class="v">Coaching clients, speaking, product advisory</div></div>
+        <div><div class="k">City</div><div class="v">Chicago, IL</div></div>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="sign-off">
-  <span class="cursive">here's to the next chapter ✦</span>
-  © 2026 Liping Zhou · Built with Claude, from Chicago.
+  <span>© 2026 Liping Zhou</span>
+  <span>Built with Claude, from Chicago</span>
 </footer>
 
 <script>
