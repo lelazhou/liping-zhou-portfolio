@@ -96,6 +96,10 @@
 
   /* ---------- Hero ---------- */
   .hero{ padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(2.4rem, 5vw, 3.5rem); }
+  .avatar{
+    width: 84px; height: 84px; border-radius: 50%; object-fit: cover;
+    margin-bottom: 1.6rem; border: 1px solid var(--line-strong);
+  }
   .eyebrow{
     font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--data); margin: 0 0 1rem;
@@ -238,6 +242,7 @@
 
 <main id="top">
   <div class="prose hero">
+    <img src="headshot.jpg" alt="Liping Zhou" class="avatar" />
     <p class="eyebrow">Product Leader → Founder &amp; Coach</p>
     <h1>Liping Zhou</h1>
     <p class="hero-copy">I've spent a decade turning messy onboarding, support, and benchmarking problems into products people actually finish — now I coach other PMs to do the same.</p>
